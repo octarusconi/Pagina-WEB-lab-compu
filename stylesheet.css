@@ -1,50 +1,77 @@
-{
-    margin: 0; /* Establece el margen exterior en 0 */
-    padding: 0; /* Establece el relleno interior en 0 */
-    box-sizing: border-box; /* Utiliza el modelo de caja de borde */
-    font-family: 'Poppins', sans-serif; /* Establece la fuente del texto como 'Poppins' o una fuente sans-serif */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    color: #ededed; /* Establece el color del texto en #ededed */
+    color: #ededed;
+    background: #081b29;
+    /* Establece el color del texto en #ededed */
 }
 
 .header {
     font-family: 'Poppins', sans-serif;
-    position: fixed; /* Establece la posición fija */
-    top: 0; /* Establece la posición superior en 0 */
-    left: 0; /* Establece la posición izquierda en 0 */
-    width: 100%; /* Establece el ancho en 100% */
-    padding: 20px 10%; /* Establece el relleno de 20px en la parte superior e inferior y 10% en los lados izquierdo y derecho */
-    background: transparent; /* Establece el fondo como transparente */
-    display: flex; /* Establece el contenedor como flex */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos del contenedor */
-    align-items: center; /* Centra los elementos verticalmente en el contenedor */
-    z-index: 100; /* Establece el índice Z en 100 para que se muestre por encima de otros elementos */
+    position: fixed;
+    /* Establece la posición fija */
+    top: 0;
+    /* Establece la posición superior en 0 */
+    left: 0;
+    /* Establece la posición izquierda en 0 */
+    width: 100%;
+    /* Establece el ancho en 100% */
+    padding: 20px 10%;
+    /* Establece el relleno de 20px en la parte superior e inferior y 10% en los lados izquierdo y derecho */
+    background: #051129;
+    /* Establece el fondo como transparente */
+    display: flex;
+    /* Establece el contenedor como flex */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos del contenedor */
+    align-items: center;
+    /* Centra los elementos verticalmente en el contenedor */
+    z-index: 1000;
+    overflow: auto;
+    /* Establece el índice Z en 100 para que se muestre por encima de otros elementos */
 }
 
 .logo {
     font-family: 'Poppins', sans-serif;
-    position: relative; /* Establece la posición relativa */
-    font-size: 25px; /* Establece el tamaño de fuente en 25px */
-    color: #fff; /* Establece el color del texto en #fff (blanco) */
-    text-decoration: none; /* Elimina la decoración de texto (por defecto, subrayado) */
-    font-weight: 600; /* Establece el grosor de la fuente en 600 (negrita) */
+    position: relative;
+    /* Establece la posición relativa */
+    font-size: 25px;
+    /* Establece el tamaño de fuente en 25px */
+    color: #fff;
+    /* Establece el color del texto en #fff (blanco) */
+    text-decoration: none;
+    /* Elimina la decoración de texto (por defecto, subrayado) */
+    font-weight: 600;
+    /* Establece el grosor de la fuente en 600 (negrita) */
+    cursor: default;
+    /* Establece el cursor en predeterminado */
+    opacity: 0;
+    /* Establece la opacidad en 0 */
+    animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
     font-family: 'Poppins', sans-serif;
-    display: inline-block; /* Establece el elemento como en línea y en bloque */
-    font-size: 25px; /* Establece el tamaño de fuente en 25px */
-    color: #fff; /* Establece el color del texto en #fff (blanco) */
-    text-decoration: none; /* Elimina la decoración de texto (por defecto, subrayado) */
-    font-weight: 500; /* Establece el grosor de la fuente en 500 (medio) */
-    margin-left: 35px; /* Establece un margen izquierdo de 35px */
-    transition: .3s; /* Establece una transición de 0.3 segundos para los cambios de estilo */
+    color: #fff;
+    display: inline-block; 
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
-    color: #9203dc; /* Cambia el color del texto a #f1c40f (amarillo) al pasar el ratón por encima */
+    color: #9203dc;
+    /* Cambia el color del texto a #f1c40f (amarillo) al pasar el ratón por encima */
 
 }
 
@@ -59,7 +86,7 @@ body {
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0 ; 
+    padding: 70px 10% 0;
 }
 
 .home-content {
@@ -70,19 +97,41 @@ body {
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBotton 1s ease forwards;
+    animation-delay: .7s;
 }
 
-.home content h1 {
+.home content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+
+.home-content h3 span {
+    color: #9203dc;
+}
+
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .1s;
 }
 
-.home content p {
+
+.home-content p {
     font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 
-.home-sci a{
+.home-sci a {
     display: inline flex;
     justify-content: center;
     align-items: center;
@@ -94,6 +143,10 @@ body {
     font-size: 20px;
     color: #9203dc;
     text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
     margin: 30px 15px 30px 0;
 }
 
@@ -103,7 +156,7 @@ body {
     box-shadow: 0 0 20px #9203dc;
 }
 
-.btn-box{
+.btn-box {
     display: inline-block;
     padding: 12px 28px;
     background: #9203dc;
@@ -113,340 +166,257 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop .1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #9203dc,
+        0 0 25px #9203dc
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 5px #9203dc, 0 0 25px #9203dc, 0 0 200px #9203dc;
-}
- 
-
-
-
-
-
-
-
-
-
-section{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.container1{
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
-
-}
-.heading1{
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-.bar{
-    font-size: 23px;
-
-}
-.Technical-bars .bar{
-    margin-top: 40px 0;
-}
-.Technical-bars .bar:first-child{
-    margin-top: 0;
-}
-.Technical-bars .bar:last-child{
-    margin-bottom: 0;
-}
-.Technical-bars .bar .info{
-    margin-bottom: 5px;
+    box-shadow: 0 0 5px #9203dc,
+        0 0 25px #9203dc, 0 0 50px #9203dc,
+        0 0 100px #9203dc, 0 0 200px #9203dc
 }
 
-.Technical-bars .bar .info span{
- font-size: 17px;
- font-weight: 500;
- animation: showText 0.5s 1s linear forwards;
- opacity: 0;
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
-.Technical-bars .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBotton {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*Aca comienza la seccion About Me*/
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
     width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+    border-radius: 8px;
 }
-@keyframes animate {
-    100%{
-        transform: scaleX(1);
-    }
-}
-.Technical-bars .bar .progress-line span{
-    height: 100px; 
-    background-color: aqua;
-    position:absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+.about-text h2{
+    font-size: 60px;
 
 }
-
-section{
-    display: flex;
-    flex-wrap: wrap;
-
+.about-text h2 span{
+    color: #9203dc;
+    
 }
-.container1{
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
-
-}
-
-.heading1{
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-
-.bar{
-    font-size: 23px;
-
-}
-
-.Technical-bars .bar{
-    margin-top: 40px 0;
-}
-.Technical-bars .bar:first-child{
-    margin-top: 0;
-
-}
-
-.Technical-bars .bar:last-child{
-    margin-bottom: 0;
-}
-.Technical-bars .bar .info{
-    margin-bottom: 5px;
-}
-
-.Technical-bars .bar .info span{
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-
-}
-
-.Technical-bars .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
-    width: 100px;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-
-}
-
-@keyframes animate{
-    100%{
-        transform: scaleX(1);
-    }
-}
-
-.Technical-bars .bar .progress-line span{
-    height: 100%;
-    background-color: aqua;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-} 
-.progress-line.html span{
-    width: 90%;
-}
-.progress-line.css span{
-    width: 60%;
-}
-.progress-line.javascript span{
-    width: 85%;
-}
-
-.progress-line.python span{
-    width: 50%;
-}
-.progress-line.react span{
-    width: 75%;
-}
-.progress-line span::after{
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000000;
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
     color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+#services{
+    color:aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #9203dc;
+}
+.container{
+    padding: 90px;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minimax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 10px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #4a015cf7,
+             1px 1px 40px #7102a5f7
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color:#000000;
     font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #9203dc;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
     opacity: 0;
+    animation: slideTop 1s ease forwards ; 
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #9203dc,
+    0 0 25px #9203dc;
+}
+.read:hover{
+    box-shadow: 0 0 5px #9203dc,
+    0 0 25px #9203dc, 0 0 50px #9203dc,
+    0 0 100px #9203dc, 0 0 200px #9203dc
+}
+.services-list div:hover{
+    transform: translateY(-10px);
 }
 
-.progress-line.html span::after{
-    content: "90%";
-
-}
-.progress-line.css span::after{
-    content: "60%";
-    
-}
-.progress-line.javascript::after{
-    content: "85%";
-    
-}
-.progress-line.python span::after{
-    content: "90%";
-    
-}
-.progress-line.react span::after{
-    content: "90%";
-    
+#skills {
+    padding: 2rem;
 }
 
-.progress-line span::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color:#000 ;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
+.skill, .professional-skill {
+    margin-bottom: 1.5rem;
 }
 
-@keyframes showText{
-    100%{
-        opacity:1;
-
-    }
+.skill p, .professional-skill p {
+    margin: 0 0 0.5rem 0;
 }
 
-.radial-bars{
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-
+.progress {
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
 }
-.radial-bars .radial-bar{
-    width:50px;
-    height: 170px;
-    margin-bottom: 10px;
+
+.progress-bar {
+    height: 20px;
+    border-radius: 20px;
+}
+
+.html {
+    width: 90%;
+    background-color: #c95d2e;
+}
+
+.css {
+    width: 60%;
+    background-color: #147bbc;
+}
+
+.javascript {
+    width: 85%;
+    background-color: #f0db4f;
+}
+
+.python {
+    width: 50%;
+    background-color: #c32ec9;
+}
+
+.react {
+    width: 75%;
+    background-color: #69bcbc;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #333;
     position: relative;
 }
 
-.radial-bars .radial-bar svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
-    height: 160px;
-}
-
-.radial-bars .radial-bar .progress-bar{
-    stroke-width: 10;
-    stop-color: #000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate 1s linear forwards;
-
-}
-
-@keyframes animate-bar {
-    100%{
-        stroke-dashoffset: -1;
-
-    }
-}
-.path {
-    stroke-width: 10;
-    stroke: aqua;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-
-}
-
-.path-1{animation: animate-path1 1s 1s linear forwards}
-.path-2{animation: animate-path2 1s 1s linear forwards}
-.path-3{animation: animate-path3 1s 1s linear forwards}
-.path-4{animation: animate-path4 1s 1s linear forwards}
-
-@keyframes animate-path1{
-    100%{
-        stroke-dashoffset: 50;
-    }
-}
-
-@keyframes animate-path2{
-    100%{
-        stroke-dashoffset: 175;
-    }
-}
-
-@keyframes animate-path3{
-    100%{
-        stroke-dashoffset: 125;
-    }
-}
-
-@keyframes animate-path4{
-    100%{
-        stroke-dashoffset: 75;
-    }
-}
-
-.radial-bar .percentage{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-
-
-}
-.radial-bar .text{
+.circle-bar {
     width: 100%;
+    height: 100%;
+    border-radius: 50%;
     position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50px);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+    top: 0;
+    left: 0;
+    clip: rect(0, 100px, 100px, 50px);
+    transform: rotate(0deg);
+}
+
+.creativity {
+    border-color: #ff9900;
+    transform: rotate(324deg); /* 90% */
+}
+
+.communication {
+    border-color: #66ccff;
+    transform: rotate(234deg); /* 65% */
 }
 
 
