@@ -185,6 +185,63 @@ body {
         0 0 100px #9203dc, 0 0 200px #9203dc
 }
 
+.collision-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.object {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9203dc;
+  animation: collision 2s infinite;
+}
+
+.object1 {
+  animation-delay: 0s;
+}
+
+.object2 {
+  animation-delay: 1s;
+}
+
+/* Estilos para la pantalla negra y la pelota */
+#blackScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: none;
+  z-index: 2000; /* Asegura que esté sobre otros elementos */
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+
+@keyframes collision {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+}
+
+
 @keyframes slideRight {
     0% {
         opacity: 0;
