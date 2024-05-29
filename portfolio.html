@@ -1,0 +1,100 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Enlace al archivo CSS externo -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="main.js"></script>
+</head>
+
+<header class="header">
+    <a href="index.html" class="logo">Portafolio</a> <!-- Enlace del logotipo -->
+    <nav class="navbar">
+        <a href="index.html" style="--i:1" class="active">Home</a> <!-- Enlace a la página de inicio -->
+        <a href="about.html" style="--i:2">About</a> <!-- Enlace a la página "Acerca de" -->
+        <a href="skills.html" style="--i:3">Skills</a> <!-- Enlace a la página de habilidades -->
+        <a href="portfolio.html" style="--i:4">Portfolio</a> <!-- Enlace a la página del portafolio -->
+        <a href="contact.html" style="--i:5">Contact</a> <!-- Enlace a la página de contacto -->
+        <script src="main.js"></script>
+    </nav>
+</header>
+
+
+<section class="projects">
+    <h1>Projects</h1>
+
+    <div class="container">
+      <div class="item" id="1">
+        <img src="resources/IMG_01.jpg" alt="">
+        <div class="text">
+          <h3>PROJECT 1</h4>
+          <p>Short Description</p>
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+
+      <div class="item" id="2">
+        <img src="resources/IMG_02.jpg" alt="">
+        <div class="text">
+          <h3>PROJECT 2</h4>
+          <p>Short Description</p>
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+
+      <div class="item" id="3">
+        <img src="resources/IMG_02.jpg" alt="">
+        <div class="text">
+            <h3>PROJECT 3</h4>
+          <p>Short Description</p>
+          </div>
+          <div class="button">Learn More</div>
+      </div>
+
+      <div class="item" id="4">
+        <img src="resources/IMG_01.jpg" alt="">
+        <div class="text">
+          <h3>PROJECT 4</h4>
+          <p>Short Description</p>
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+
+      <div class="item" id="5">
+        <img src="resources/IMG_01.jpg" alt="">
+        <div class="text">
+          <h3>PROJECT 5</h4>
+          <p>Short Description</p>
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+
+      <div class="item" id="6">
+        <img src="resources/IMG_02.jpg" alt="">
+        <div class="text">
+          <h3>PROJECT 6</h4>
+          <p>Short Description</p>
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="preview" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="img" src="">
+      <div id="details">
+        <h3 id="title"></h3>
+        <p id="info">Some text</p>
+        <div class="button" id="live">View</div>
+          <i class="fab fa-github-square" id="github"></i>
+      </div>
+    </div>
+  </div>
+</section>
