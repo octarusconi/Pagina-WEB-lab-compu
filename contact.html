@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('fWX1RdwB0oZgnn4BY'); // Reemplaza "YOUR_USER_ID" con tu User ID de EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <!-- Incluir el contenido del header.html -->
+    <header class="header">
+        <a href="index.html" class="logo">Portafolio</a>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2">About</a>
+            <a href="skills.html" style="--i:3">Skills</a>
+            <a href="portfolio.html" style="--i:4">Portfolio</a>
+            <a href="contact.html" style="--i:5" class="active">Contact</a>
+        </nav>
+    </header>
+    <section class="contact">
+        <h1>Contact <span>Me</span></h1>
+        <div class="contact-container">
+            <form id="contact-form">
+                <div class="input-box">
+                    <input type="text" name="from_name" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="from_email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="phone" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="subject" required>
+                    <label>Subject</label>
+                </div>
+                <div class="input-box">
+                    <textarea name="message" required></textarea>
+                    <label>Your Message</label>
+                </div>
+                <button type="submit" class="btn-box">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_l3n1wq3', 'template_evsqv58', this) // Reemplaza "YOUR_SERVICE_ID" con tu Service ID y "YOUR_TEMPLATE_ID" con tu Template ID de EmailJS
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message, please try again later.');
+                });
+        });
+    </script>
+</body>
+</html>
