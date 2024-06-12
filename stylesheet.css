@@ -936,3 +936,105 @@ i:hover{
   text-decoration: none;
   cursor: pointer;
 }
+
+
+
+.contact {
+    padding: 100px 10%;
+    background: #081b29;
+    color: #ededed;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.contact h1 span {
+    color: #9203dc;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    background: #101820;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: 1px solid #9203dc;
+    color: #ededed;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #ededed;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+    top: -20px;
+    left: 10px;
+    color: #9203dc;
+    font-size: 12px;
+}
+
+.input-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #9203dc;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #9203dc;
+}
+
+.btn-box:hover {
+    background: #9203dc;
+    box-shadow: 0 0 20px #9203dc;
+}
+
+
+
+
+
+
+
+
+
